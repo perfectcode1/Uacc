@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Ultison Mobile</title>
+	<link rel="stylesheet" href="gson.min.css" />
+	<link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="./jquery.mobile-1.2.0.min.css" />
+	<script src="./jquery-1.8.2.min.js"></script>
+	<script src="./jquery.mobile-1.2.0.min.js"></script>
+</head> 
+
+	
+<body> 
+
+<div data-role="page" id="one" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" >	
+		<h2>Information</h2>
+		
+		 <p>This application is designed to make accounting calculations easier and faster.</p>
+		 <p>This is a free version that does not check your inputs for errors, so be sure to enter correct values.</p>
+
+   <p>For enquires, requests or complaints, send an email to <a href="mailto:perfectcode1@gmail.com?cc=info@ultison.net&subject=Accounting-Mobile%20Related&body=%0A%0A%0A%0A%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%2D%0ARegards.">perfectcode1@gmail.com</a></p>
+
+ 
+<p>Your feedback/suggestions will be highly appreciated.</p>
+
+
+		<p>Like ULTISON on <a href="https://www.facebook.com/ultison" data-role="button" data-theme="c">Facebook</a></p>
+		
+		<h3>Applications:</h3>
+		<p><a href="#two" data-role="button" data-rel="page"  data-transition="pop" data-theme="e">Liquidity Ratio</a></p>
+		<p><a href="#three" data-role="button" data-rel="page"  data-transition="pop" data-theme="e">Fixed Assets Depreciation</a></p>
+		<p><a href="#four" data-role="button" data-rel="dialog" data-transition="pop" data-theme="b">About</a></p>
+	</div>
+	
+	<div data-role="footer" data-theme="d">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" data-theme="e">	
+		<h2>Liquidity Ratio Calculator</h2>
+		
+		<div data-role="fieldcontain">
+		<label for="la">Total Liquid Assets:</label>
+		<input type="text" name="la" id="la" />
+		</div>
+		
+		<div data-role="fieldcontain">
+		<label for="stl">Short Term Liabilities:</label>
+		<input type="text" name="stl" id="stl" />
+		</div>
+		
+		<p><input type="button" id="lrcalc" name="calculate" value="Calculate" data-role="button"/></p>
+		<p><a href="#one" data-direction="reverse" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-iconpos="right" data-theme="b">Back to Home</a></p>		
+		 	<div id="display2">
+		  <div data-role="fieldcontain">
+			<p><b>Result:</b><br /> <span id="result2">OK</span></p>
+		 </div>
+		</div>
+	</div>
+	
+	<div data-role="footer">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+
+<div data-role="page" id="three" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" data-theme="e">	
+		<h2>Fixed Assets Depreciation Calculator</h2>
+		
+		<div data-role="fieldcontain">
+		<label for="LMP">Asset Cost:</label>
+		<input type="text" name="acst" id="acst" />
+		</div>
+
+		<div data-role="fieldcontain">
+		<label for="salv">Salvage value:</label>
+		<input type="text" name="salv" id="salv" />
+		</div>
+
+		<div data-role="fieldcontain">
+		<label for="LMP">Asset Life:</label>
+		<input type="range" name="alf" id="alf" min="1" max="10" value="5" />
+		<span>&nbsp;years</span>
+		</div>
+		
+		<div data-role="fieldcontain">
+		<label for="rule">Method:</label>
+		<select name="rule" id="rule" />
+		  <option value="1">Straight line</option>
+		  <option value="2">Double-declining balance</option>
+		  <option value="3">Sum of years</option>
+		</select>
+		</div>
+		
+		<p><input type="button" id="assetdeprcalc" name="calculate" value="Calculate" data-role="button"/></p>
+		
+		<div id="display">
+		  <div data-role="fieldcontain">
+			<p><b>Formula:</b> <span id="formula">ok</span></p>
+		  </div>
+		  <div data-role="fieldcontain">
+			<p><b>Result:</b><br /> <span id="result">OK</span></p>
+		  </div>
+		</div>
+		
+		<p><a href="#one" data-direction="reverse" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-iconpos="right" data-theme="b">Back to Home</a></p>		
+	</div>
+	
+	<div data-role="footer">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+<div data-role="page" id="four" data-theme="a">
+
+	<div data-role="header">
+		<h1><span class="appname"></span></h1>
+	</div>
+
+	<div data-role="content" data-theme="e">	
+		<h2>Developer</h2>
+		<h4><span class="appname"></span> <span class="appver"></span></h4>
+		<p>More features will be rolled out from time to time.<br />For sponsorship/partnership/programming requests, call +2347032642745.<br />Enjoy!</p>
+		<p>I automate all tasks on earth to the click of a button. Try me.</p>
+		<p>Written by <strong>Godson Tudeme Jnr (4p05t14)(Gson)</strong>.</p>	
+		<p><a href="#one" data-direction="reverse" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-theme="b">Back to Home</a></p>			
+	</div>
+	
+	<div data-role="footer">
+		<h4>ULTISON TECHNOLOGIES</h4>
+	</div>
+</div>
+
+</body>
+</html>
